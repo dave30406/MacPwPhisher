@@ -35,6 +35,7 @@ while true; do
         echo "Password is correct."
         sudo -k # Clear the sudo credentials cache
         break
+    fi
 done
 
 if [[ ${base64} == true ]]; then
