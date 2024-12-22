@@ -24,7 +24,7 @@ while true; do
     if [[ ${app} != "" ]]; then
         pwd=$(osascript -e 'tell app "'"${app}"'" to display dialog "'"${dialog}"'" default answer "" with icon alias '"${icon_path}"' with title "'"${title}"'" buttons {"Continue"} default button "Continue" with hidden answer')
     else
-        pwd=$(osascript -e 'display dialog "'"${dialog}"'" default answer "" with icon alias '"${icon_path}"' with title "'"${title}"'" buttons {"Continue"} default button "Continue" with hidden answer')
+        pwd=$(osascript -e 'display dialog "'"${dialog}"'" default answer "" with icon alias "'"${icon_path}"'" with title "'"${title}"'" buttons {"Continue"} default button "Continue" with hidden answer')
     fi
 
     pwd=${pwd#*"button returned:Continue, text returned:"}
