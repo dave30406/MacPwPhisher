@@ -35,6 +35,8 @@ while true; do
         echo "Password is correct."
         sudo -k # Clear the sudo credentials cache
         break
+    else
+        echo "Password '${pwd}' is incorrect."
     fi
 done
 
